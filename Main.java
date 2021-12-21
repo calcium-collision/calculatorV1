@@ -15,8 +15,7 @@ public class Main {
         // Pre-initialization
         double firstNumber = 0;
         double secondNumber = 0;
-        double answer = 0;
-        String signString = "";
+        String signString;
         Sign sign = null;
 
         //// Accept first number
@@ -89,27 +88,10 @@ public class Main {
 
         }
 
+        CalcOperation operation1 = new CalcOperation(firstNumber, secondNumber, sign);
+        System.out.println(operation1.Calculate());
+        System.out.println(operation1.toString());
 
-        switch (sign){
-            case PLUS:
-                answer = firstNumber + secondNumber;
-                break;
-
-            case MINUS:
-                answer = firstNumber - secondNumber;
-                break;
-
-            case DIVIDE:
-                answer = firstNumber / secondNumber;
-                break;
-
-            case MULTIPLY:
-                answer = firstNumber * secondNumber;
-                break;
-
-        }
-        //// Print all expression with answer
-        System.out.printf("%.2f %s %.2f = %.2f", firstNumber, signString, secondNumber, answer);
     }
 
 }
