@@ -1,19 +1,19 @@
 package com.company.calcium_collision;
 
-public class CalcOperation {
+public class CalculatorAction {
     private double numberOne;
     private double numberTwo;
     private Sign operator;
     private double result;
 
-    CalcOperation(double firstNumber, double secondNumber, Sign oper){
+    CalculatorAction(double firstNumber, double secondNumber, Sign oper){
         numberOne = firstNumber;
         numberTwo = secondNumber;
         operator = oper;
-        Calculate();
+        calculate();
     }
 
-    public double Calculate(){
+    public double calculate(){
         switch (operator){
             case PLUS:
                 result = numberOne + numberTwo;
